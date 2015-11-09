@@ -5,42 +5,29 @@ this repository provides some bash scripts and config files to allow quick insta
 [go to current release notes](/RELEASE_NOTES.md/)
 
 ## A short introduction of usage
+Created on July.27 2010
 
-Autor Yingding Wang 
-Erstellt am 27.Juli.2010
+The version idsAutoInstaller3b is assembled with predefined configuration- and installation templates, which is specified for IBM IDS 11.50x one instance database server.
 
-das AutoInstaller2 
-ist mit vorgelegten Konfigurationstemplat für IDS Develop Edition zum Test zweg.
+The version idsAutoInstaller4a is assembled with predefined configuration- and installation templates, which is specified for IBM IDS 11.70x one instance database server.
 
-das AutoInstaller3
-ist angefertigt mit vorgelegten Konfiguraions- und Installationstemplat für LMU
-Spezifisches IBM IDS 11.50 ein Instanz Datenbank Server.
+**Note:** This installer is only applicable for Linux System (SLES 10/11).
+**Note:** Please do NOT edit any of provided files in a microsoft windows editor.
 
-das AutoInstaller4
-ist angefertigt mit vorgelegten Konfiguraions- und Installationstemplat für LMU
-Spezifisches IBM IDS 11.70 ein Instanz Datenbank Server.
+##Quick start guide
 
-
-Warnung: Dieser Installer ist nur für Linux System (b.z.w SLES 10/11) konzepiert.
-Warnung: Editieren Sie auf keinem Fall diesen Installer im Windows
-Warnung: Falls die berechtigung auf autoinstaller verloren gegangen seien. Die funktionstüchtige Autoinstaller sind noch auf dem OAT Server unter /SoftwareRepository zu erreichen. führen Sie scp -pr /SoftwareRepository/AutoInstaller<x> {Zielverzeichnis}
-um die Sourcecode ans Zielverzeichnis mit funktionierenden Berechtigung für AutoInstaller zu kopieren.
-
-Quick Start guide:
-
-Kopieren Sie die idsAutoInstaller<X> in /tmp verzeichnis auf dem Linux Server
-
-Führen Sie "lmu_ids_installer" als Root user/oder User mit Root berechtigung aus.
+- copy the idsAutoInstaller<X> in your local /tmp directory on your linux server
+- copy your licensed IBM IDS Server xxxxx.tar in the /tmp/idsAutoInstaller<X> directory, so that the idsAutoInstaller can use this tar file to install.
+- start "run_ids_installer.sh" as "root" with **sh run_ids_installer.sh**.
 
 
-Professional Start guide:
+##Advanced start guide:
 
-Kopieren Sie die idsAutoInstaller<x> in /tmp Verzeichnis auf dem Linux Server
+- copy the idsAutoInstaller<X> in your local /tmp directory on your linux server
 
-Führen Sie die
-(Hinweis:
-Sie können jeden einzelen Skript vor dem Ausführen nach Ihren Bedarf anpassen.
-Die genaue Funktion und Details zu jeweiligen einzelnen Skripten finden Sie in Readme.txt im AutoInstallerverzeichnis.)
+**Note:** Please change the global variables in the script as your need, before you execute the scripts. The main function of each scripts can be found in Readme.txt file within the idsAutoInstaller directory. 
  
 01_preconfigIDSDB.sh
 02_install.sh
+03_prostconfigIDSDB.sh
+04_postinstall.sh
