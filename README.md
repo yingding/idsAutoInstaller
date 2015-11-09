@@ -27,12 +27,18 @@ The version idsAutoInstaller4a is assembled with predefined configuration- and i
 
 1. copy the idsAutoInstaller<X> in your local /tmp directory on your linux server
 
-**Note:** Please change the global variables in the script as your need, before you execute the scripts. The main function of each scripts can be found in Readme.txt file within the idsAutoInstaller directory. 
- 
-- 01_preconfigIDSDB.sh
-- 02_install.sh
-- 03_prostconfigIDSDB.sh
-- 04_postinstall.sh
+>**Note:** Please change the global variables in the script as your need, before you execute the scripts. The main function of each scripts can be found in Readme.txt file within the idsAutoInstaller directory. 
+> 
+>- 01_preconfigIDSDB.sh
+>- 02_install.sh
+>- 03_prostconfigIDSDB.sh
+>- 04_postinstall.sh
 
 2. copy your licensed IBM IDS Server xxxxx.tar in the /tmp/idsAutoInstaller<X> directory, so that the idsAutoInstaller can use this tar file to install.
 3. start "run_ids_installer.sh" as "root" with **sh run_ids_installer.sh**.
+
+##All about github .md markdowns
+
+* [.md markdowns](http://daringfireball.net/projects/markdown/syntax)
+* [.md online viewer](http://tmpvar.com/markdown.html)
+* [.md useful link](http://stackoverflow.com/questions/10240125/working-with-readme-md-on-github-com)
