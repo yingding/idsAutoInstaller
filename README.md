@@ -11,14 +11,15 @@ The version idsAutoInstaller3b is assembled with predefined configuration- and i
 
 The version idsAutoInstaller4a is assembled with predefined configuration- and installation templates, which is specified for IBM IDS 11.70x one instance database server.
 
-**Note:** This installer is only applicable for Linux System (SLES 10/11).
-**Note:** Please do NOT edit any of provided files in a microsoft windows editor.
+**Note:** 
+1. This installer is only applicable for Linux System (SLES 10/11).
+2. Please do NOT edit any of provided files in a microsoft windows editor.
 
 ##Quick start guide
 
-- copy the idsAutoInstaller<X> in your local /tmp directory on your linux server
-- copy your licensed IBM IDS Server xxxxx.tar in the /tmp/idsAutoInstaller<X> directory, so that the idsAutoInstaller can use this tar file to install.
-- start "run_ids_installer.sh" as "root" with **sh run_ids_installer.sh**.
+1. copy the idsAutoInstaller<X> in your local /tmp directory on your linux server
+2. copy your licensed IBM IDS Server xxxxx.tar in the /tmp/idsAutoInstaller<X> directory, so that the idsAutoInstaller can use this tar file to install.
+3. start "run_ids_installer.sh" as "root" with **sh run_ids_installer.sh**.
 
 
 ##Advanced start guide:
@@ -27,7 +28,7 @@ The version idsAutoInstaller4a is assembled with predefined configuration- and i
 
 **Note:** Please change the global variables in the script as your need, before you execute the scripts. The main function of each scripts can be found in Readme.txt file within the idsAutoInstaller directory. 
  
-01_preconfigIDSDB.sh
-02_install.sh
-03_prostconfigIDSDB.sh
-04_postinstall.sh
+- 01_preconfigIDSDB.sh
+- 02_install.sh
+- 03_prostconfigIDSDB.sh
+- 04_postinstall.sh
