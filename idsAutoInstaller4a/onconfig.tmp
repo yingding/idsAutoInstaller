@@ -17,7 +17,7 @@
 ROOTNAME        rootdbs         # Root dbspace name
 ROOTPATH        /db-spaces/01/rootdbs # Path for device containing root dbspace
 ROOTOFFSET      0               # Offset of root dbspace into device (Kbytes)
-ROOTSIZE        2500000         # Size of root dbspace (Kbytes) = 2.5 GB
+ROOTSIZE        2000000         # Size of root dbspace (Kbytes) = 2 GB
 
 # Disk Mirroring Configuration Parameters
 
@@ -117,11 +117,12 @@ DEADLOCK_TIMEOUT 60              # Max time to wait of lock in distributed env.
 RESIDENT        1               # Forced residency flag (Yes = 1, No = 0) [1/-1]
 
 MULTIPROCESSOR  1               # 0 for single-processor, 1 for multi-processor
-NUMCPUVPS       8               # Number of user (cpu) vps
+#NUMCPUVPS       8               # Number of user (cpu) vps
 SINGLE_CPU_VP   0               # If non-zero, limit number of cpu vps to one
-NOAGE           1               # Process aging
-AFF_SPROC       0               # Affinity start processor
-AFF_NPROCS      8               # Affinity number of processors
+#NOAGE           1               # Process aging
+#AFF_SPROC       0               # Affinity start processor
+#AFF_NPROCS      8               # Affinity number of processors
+VPCLASS CPU,num=8,aff=(0-7),noage # Replace NUMCPUVPS, AFF_SPROC, AFF_NPROCS, and NOAGE
 # Shared Memory Parameters
 
 # === Tan; 2008-01-28; circa 6 GB Arbeitsspeicher sind hier reserviert ===
