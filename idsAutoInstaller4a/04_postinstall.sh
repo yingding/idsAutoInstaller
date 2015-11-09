@@ -29,6 +29,10 @@ su informix -c 'onparams -p -s 29000000 -d dbphysical -y';
 #allocating 29 GB dbphysical
 echo "End of the installation"
 
+echo "Insert IDS Start Script  in Runlevel"
+insserv /etc/init.d/informix_startup;
+echo "Finished Insert IDS Start Script in Runlevel"
+
 echo "please execute:"
 echo "/backup/configurations/administration/appendLogicalLog.sh"
 echo "to append new logs."

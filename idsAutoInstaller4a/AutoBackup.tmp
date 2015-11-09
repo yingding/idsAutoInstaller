@@ -235,7 +235,9 @@ echo "$(date +%y-%m-%d_%T) Starting level $LEVEL ARCHIVE of INFORMIX-Online data
 #ls -laF /opt/informix/logfiles
 FlushMainTape
 #ls -laF /opt/informix/logfiles
-CommandOut=`$INFORMIXBIN/ontape -s -L $LEVEL <<-EOF | head -100`
+#CommandOut=`$INFORMIXBIN/ontape -s -L $LEVEL <<-EOF | head -100`
+CommandOut=`echo "\r" | $INFORMIXBIN/ontape -s -L $LEVEL | head -100`
+# passing "\r" return char with echo to ontape command. Yingding Wang 30.01.2013 for SLES11 SP2
 #echo "$INFORMIXBIN/ontape -s -L $LEVEL hat beendet mit code $?"
 IS_SUCC=`echo $CommandOut | grep -i "100 percent" `
 #
